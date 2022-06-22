@@ -64,133 +64,20 @@ export default {
       getLine(params)
         .then(res => {
           console.log("产线生产进度", res);
-		  const {records,total}=res.data
+          const { records, total } = res.data;
           this.names = ["product"];
           this.alreay = ["已完成数量"];
           this.will = ["已接收数量"];
-		  this.lines = records
-        //   this.lines = [
-        //     {
-        //       CODE: "SX-YL-L2",
-        //       receiveNum: 142,
-        //       finishNum: 67,
-        //       NAME: "陕西总装厂叶轮生产线"
-        //     },
-        //     {
-        //       CODE: "WQZ-JC-L1",
-        //       receiveNum: 4,
-        //       finishNum: 2,
-        //       NAME: "钦州外协工厂机舱生产线"
-        //     },
-        //     {
-        //       CODE: "FJ-YL-L2",
-        //       receiveNum: 70,
-        //       finishNum: 35,
-        //       NAME: "叶轮生产线"
-        //     },
-        //     {
-        //       CODE: "JSLG-YL-L2",
-        //       receiveNum: 92,
-        //       finishNum: 37,
-        //       NAME: "江苏临港叶轮生产线"
-        //     },
-        //     {
-        //       CODE: "XT-JC-L1",
-        //       receiveNum: 178,
-        //       finishNum: 88,
-        //       NAME: "邢台金风机舱生产线"
-        //     },
-        //     {
-        //       CODE: "FJ-JD-L4",
-        //       receiveNum: 16,
-        //       finishNum: 8,
-        //       NAME: "机舱和电机的装配体生产线"
-        //     },
-        //     {
-        //       CODE: "XT-YL-L2",
-        //       receiveNum: 180,
-        //       finishNum: 90,
-        //       NAME: "邢台金风叶轮生产线"
-        //     },
-        //     {
-        //       CODE: "JSLG-JC-L1",
-        //       receiveNum: 92,
-        //       finishNum: 37,
-        //       NAME: "江苏临港机舱生产线"
-        //     },
-        //     {
-        //       CODE: "FJ-JC-L1",
-        //       receiveNum: 67,
-        //       finishNum: 32,
-        //       NAME: "机舱生产线"
-        //     },
-        //     {
-        //       CODE: "GS-JC-L1",
-        //       receiveNum: 158,
-        //       finishNum: 79,
-        //       NAME: "酒泉总装厂机舱生产线"
-        //     },
-        //     {
-        //       CODE: "YJ-JC-L1",
-        //       receiveNum: 102,
-        //       finishNum: 51,
-        //       NAME: "机舱生产线"
-        //     },
-        //     {
-        //       CODE: "FJ-JDY-L3",
-        //       receiveNum: 8,
-        //       finishNum: 4,
-        //       NAME: "机头装配总成生产线"
-        //     },
-        //     {
-        //       CODE: "JS-JC-L1",
-        //       receiveNum: 76,
-        //       finishNum: 38,
-        //       NAME: "江苏总装厂机舱生产线"
-        //     },
-        //     {
-        //       CODE: "YJ-YL-L2",
-        //       receiveNum: 96,
-        //       finishNum: 48,
-        //       NAME: "叶轮生产线"
-        //     },
-        //     {
-        //       CODE: "SX-JC-L1",
-        //       receiveNum: 154,
-        //       finishNum: 70,
-        //       NAME: "陕西总装厂机舱生产线"
-        //     },
-        //     {
-        //       CODE: "GS-YL-L2",
-        //       receiveNum: 158,
-        //       finishNum: 79,
-        //       NAME: "酒泉总装厂叶轮生产线"
-        //     },
-        //     {
-        //       CODE: "JS-YL-L2",
-        //       receiveNum: 76,
-        //       finishNum: 38,
-        //       NAME: "江苏总装厂叶轮生产线"
-        //     },
-        //     {
-        //       CODE: "WQZ-YL-L2",
-        //       receiveNum: 4,
-        //       finishNum: 2,
-        //       NAME: "钦州外协工厂叶轮生产线"
-        //     },
-        //     {
-        //       CODE: "BCD-JC-L1",
-        //       receiveNum: 42,
-        //       finishNum: 21,
-        //       NAME: "承德总装厂机舱生产线"
-        //     },
-        //     {
-        //       CODE: "BCD-YL-L2",
-        //       receiveNum: 42,
-        //       finishNum: 21,
-        //       NAME: "承德总装厂叶轮生产线"
-        //     }
-        //   ];
+          this.lines = records;
+          //   保留一个模拟例子，防止数据错乱
+          //   this.lines = [
+          //     {
+          //       CODE: "SX-YL-L2",
+          //       receiveNum: 142,
+          //       finishNum: 67,
+          //       NAME: "陕西总装厂叶轮生产线"
+          //     },
+          //   ];
           let list = this.lines;
           this.total = total;
           this.$set(this.$data, "total", list.length);
